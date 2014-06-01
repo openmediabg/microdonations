@@ -14,4 +14,5 @@ end
 
 group :development, :test do
   gem 'debugger'
+  gem 'rspec-rails', '~> 3.0.0.rc1'
 end
