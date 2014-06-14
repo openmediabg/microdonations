@@ -10,7 +10,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
+@import 'foundation/functions';
 
 // $experimental: true;
 
@@ -1288,4 +1288,18 @@
 // $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
 // $range-slider-handle-cursor: pointer;
 
-@import 'foundation';
+// Instead of @import 'foundation'; add only what we need
+@import 'foundation/components/global';
+@import 'foundation/components/grid';
+@import 'foundation/components/block-grid';
+@import 'foundation/components/type';
+@import 'foundation/components/breadcrumbs';
+@import 'foundation/components/alert-boxes';
+@import 'foundation/components/forms';
+@import 'foundation/components/buttons';
+@import 'foundation/components/switch';
+@import 'foundation/components/labels';
+@import 'foundation/components/panels';
+@import 'foundation/components/pagination';
+@import 'foundation/components/tables';
+@import 'foundation/components/thumbs';
