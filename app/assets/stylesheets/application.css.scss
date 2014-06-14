@@ -1,3 +1,23 @@
 //= require_tree .
 //= require_self
 //= require foundation_and_overrides
+
+$footer-height: 8rem;
+$vertical-padding: 1.25rem;
+
+#container { padding: $vertical-padding 0; }
+
+.compact-content { padding-top: 10%; }
+
+#root { min-height: 100%; margin-bottom: -$footer-height; }
+#root:after { content: ""; display: block; height: $footer-height; }
+
+#footer {
+  height: $footer-height;
+  background-color: #333;
+  color: #888;
+  padding-top: $vertical-padding;
+
+  p,
+  ul { font-size: 0.85rem; }
+}

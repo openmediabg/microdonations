@@ -11,5 +11,45 @@ html lang="bg"
     = csrf_meta_tags
 
   body
-    = yield
+    #root
+      .contain-to-grid
+        nav.top-bar data-topbar=true data-options="back_text: ← обратно︎"
+          ul.title-area
+            li.name
+              h1 = link_to 'Микродарения за независима журналистика', root_path
+
+            li.toggle-topbar.menu-icon
+              = link_to root_path do
+                span Меню
+
+          section.top-bar-section
+            ul.right
+              - if user_signed_in?
+              - else
+                li.active
+                  = link_to 'Включи се като читател', new_user_registration_path
+
+      #container
+        .row
+          .small-12.column
+            - if flash[:notice]
+              div.alert-box.success data-alert=true
+                = flash[:notice]
+                a.close href="#" &times;
+
+            - if flash[:alert]
+              div.alert-box.alert data-alert=true
+                = flash[:alert]
+                a.close href="#" &times;
+
+            = yield
+
+    #footer
+      .row
+        .small-12.column
+          p Микродарения за независима журналистика
+          ul.no-bullet
+            li Проектът се развива от #{link_to 'Фондация "Отворени медии"', 'http://openmedia.bg/'}.
+            li Този проект е с #{link_to 'отворен код', 'https://github.com/openmediabg/microdonations'}.
+
     = javascript_include_tag 'application'
