@@ -8,6 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
+gem 'foundation-rails'
 
 group :development do
   gem 'spring'
