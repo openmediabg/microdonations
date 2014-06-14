@@ -54,6 +54,8 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/v/3-0/docs
   config.infer_spec_type_from_file_location!
 
+  config.include FactoryGirl::Syntax::Methods
+
   config.before(:suite) do
     FactoryGirl.reload
   end
