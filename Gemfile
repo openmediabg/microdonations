@@ -10,6 +10,7 @@ gem 'devise'
 gem 'therubyracer', platforms: :ruby
 gem 'foundation-rails'
 gem 'slim'
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
 
 group :development do
   gem 'spring'
