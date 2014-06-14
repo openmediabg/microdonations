@@ -25,9 +25,14 @@ html lang="bg"
           section.top-bar-section
             ul.right
               - if user_signed_in?
+                li.has-dropdown
+                  = link_to current_user.first_name, edit_user_registration_path
+                  ul.dropdown
+                    li = link_to 'Редакция на профила', edit_user_registration_path
+                    li = link_to 'Изход', destroy_user_session_path, method: :delete
               - else
-                li.active
-                  = link_to 'Включи се като читател', new_user_registration_path
+                li = link_to 'Вход', new_user_session_path
+                li = link_to 'Включи се като читател', new_user_registration_path, class: :button
 
       #container
         .row
