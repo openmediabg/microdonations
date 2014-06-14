@@ -1,7 +1,6 @@
 Devise.setup do |config|
   require 'devise/orm/active_record'
 
-  config.secret_key = Rails.application.secrets.devise_secret_key
   config.pepper = Rails.application.secrets.devise_pepper
   config.mailer_sender = 'contact@openmedia.bg'
   config.case_insensitive_keys = [:email]
