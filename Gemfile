@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
 gem 'foundation-rails'
+gem 'slim'
 
 group :development do
   gem 'spring'
