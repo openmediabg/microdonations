@@ -19,7 +19,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger'
+  gem 'byebug'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
