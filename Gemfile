@@ -11,6 +11,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'foundation-rails'
 gem 'slim'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
+gem 'simple_form'
 
 group :development do
   gem 'spring'

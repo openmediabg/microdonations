@@ -1,0 +1,13 @@
+bg:
+  activerecord:
+    attributes:
+      user:
+        email: Имейл
+        password: Парола
+        password_confirmation: Потвърждение
+        first_name: 'Малко име'
+        last_name: 'Фамилия'
+
+  errors:
+    messages:
+      confirmation: не съвпада
