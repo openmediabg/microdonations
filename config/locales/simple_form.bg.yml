@@ -12,10 +12,3 @@ bg:
         password_confirmation: Паролата отново
         first_name: Малко име
         last_name: Фамилия
-    abides:
-      user:
-        email: Необходимо е да въведете своя имейл адрес.
-        password: Моля въведете паролата си.
-        password_confirmation: Потвърждението на паролата ви не съвпада.
-        first_name: Необходимо е да въведете името си.
-        last_name: Необходимо е да въведете фамилията си.

@@ -9,5 +9,16 @@ bg:
         last_name: 'Фамилия'
 
   errors:
-    messages:
-      confirmation: не съвпада
+    attributes:
+      email:
+        required: Необходимо е да въведете своя имейл адрес.
+        invalid: Въвели сте невалиден имейл адрес.
+      password:
+        required: Моля въведете парола от поне 8 символа.
+        too_short: Паролата ви трябва да е дълга поне 8 символа.
+      password_confirmation:
+        confirmation: Потвърждението на паролата ви не съвпада.
+      first_name:
+        required: Необходимо е да въведете името си.
+      last_name:
+        required: Необходимо е да въведете фамилията си.
