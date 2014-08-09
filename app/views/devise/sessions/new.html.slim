@@ -1,6 +1,6 @@
 .row.compact-content
   .medium-6.medium-offset-3.columns
-    = form_for resource, as: resource_name, url: session_path(resource_name), data: {abide: true} do |f|
+    = form_for resource, as: resource_name, url: sign_in_path, data: {abide: true} do |f|
       div
         = f.email_field :email, autofocus: true, placeholder: 'Вашият имейл', required: true
         small.error Необходимо е да въведете своя имейл адрес.
@@ -17,4 +17,7 @@
       div
         = f.submit 'Вход', class: 'button'
 
-    = render 'devise/shared/links'
+      p
+        ' Все още нямате потребител?
+        = link_to 'Регистрирайте се тук', sign_up_path
+        ' .

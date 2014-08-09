@@ -1,6 +1,6 @@
 .row.compact-content
   .medium-6.medium-offset-3.columns
-    = simple_form_for resource, as: resource_name, url: registration_path(resource_name), data: {abide: true} do |f|
+    = simple_form_for resource, as: resource_name, url: sign_up_path, data: {abide: true} do |f|
 
       - f.with_options label: false do |f|
         = f.input :email, autofocus: true, required: true
@@ -11,4 +11,7 @@
 
       = f.button :submit, 'Регистрация', class: 'button'
 
-    = render 'devise/shared/links'
+      p
+        ' Вече имате регистрация?
+        = link_to 'Влезте тук', sign_in_path
+        ' .

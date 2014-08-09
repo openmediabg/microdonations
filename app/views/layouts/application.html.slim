@@ -26,13 +26,13 @@ html lang="bg"
             ul.right
               - if user_signed_in?
                 li.has-dropdown
-                  = link_to current_user.first_name, edit_user_registration_path
+                  = link_to current_user.first_name, '#TODO'
                   ul.dropdown
-                    li = link_to 'Редакция на профила', edit_user_registration_path
-                    li = link_to 'Изход', destroy_user_session_path, method: :delete
+                    li = link_to 'Редакция на профила', '#TODO'
+                    li = link_to 'Изход', sign_out_path, method: :delete
               - else
-                li = link_to 'Вход', new_user_session_path
-                li = link_to 'Включи се като читател', new_user_registration_path, class: :button
+                li = link_to 'Вход', sign_in_path
+                li = link_to 'Включи се като читател', sign_up_path, class: :button
 
       #container
         .row

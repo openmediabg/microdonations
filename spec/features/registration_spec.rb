@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Registration' do
   scenario 'Registering a new user' do
-    visit new_user_registration_path
+    visit sign_up_path
     fill_in 'Вашият имейл', with: 'ivan@example.org'
     fill_in 'Парола', with: 'password'
     fill_in 'Паролата отново', with: 'password'
