@@ -8,7 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'therubyracer', platforms: :ruby
-gem 'foundation-rails'
+gem 'foundation-rails', '5.3.3' # The Abide plugin is vendored.
 gem 'slim'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
 gem 'simple_form'
