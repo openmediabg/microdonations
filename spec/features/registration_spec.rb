@@ -10,6 +10,6 @@ feature 'Registration' do
     fill_in 'Фамилия', with: 'Петров'
     click_on 'Регистрация'
 
-    expect(page).to have_content 'Добре дошли! Вие се регистрирахте успешно.'
+    page.should have_content 'Добре дошли! Вие се регистрирахте успешно.'
   end
 end
