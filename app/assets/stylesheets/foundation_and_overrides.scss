@@ -1407,3 +1407,9 @@ select.error {
   margin-bottom: 0;
 }
 label.abide-error { @include form-label-error-color; }
+
+// Checkboxes
+label.boolean {
+  vertical-align: baseline;
+  input { margin-right: 0.44rem; }
+}

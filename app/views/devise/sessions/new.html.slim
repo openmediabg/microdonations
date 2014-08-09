@@ -1,21 +1,13 @@
 .row.compact-content
   .medium-6.medium-offset-3.columns
-    = form_for resource, as: resource_name, url: sign_in_path, data: {abide: true} do |f|
-      div
-        = f.email_field :email, autofocus: true, placeholder: 'Вашият имейл', required: true
-        small.error Необходимо е да въведете своя имейл адрес.
+    = simple_form_for resource, as: resource_name, url: sign_in_path, data: {abide: true} do |f|
+      - f.with_options label: false do |f|
+        = f.input :email, autofocus: true, required: true
+        = f.input :password, required: true
 
-      div
-        = f.password_field :password, autocomplete: 'off', placeholder: 'Парола', required: true
-        small.error Моля въведете паролата си.
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
 
-      - if devise_mapping.rememberable?
-        div
-          = f.check_box :remember_me
-          = f.label :remember_me, 'Запомни ме'
-
-      div
-        = f.submit 'Вход', class: 'button'
+      = f.button :submit, 'Вход', class: 'button'
 
       p
         ' Все още нямате потребител?
