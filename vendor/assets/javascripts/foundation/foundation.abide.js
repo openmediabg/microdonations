@@ -10,7 +10,7 @@
       live_validate : true,
       focus_on_invalid : true,
       error_labels: true, // labels with a for="inputId" will recieve an `error` class
-      error_class: 'error',
+      error_class: 'abide-error',
       timeout : 1000,
       patterns : {
         alpha: /^[a-zA-Z]+$/,

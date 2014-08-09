@@ -8,8 +8,8 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :abide_attributes
     b.use :label_input
-    b.use :abide_message, wrap_with: { tag: :small, class: :error }
-    b.use :error, wrap_with: { tag: :small, class: :error }
+    b.use :error, wrap_with: { tag: :span, class: :error }
+    b.use :abide_message, wrap_with: { tag: :span, class: 'abide-message' }
     b.use :hint,  wrap_with: { tag: :span, class: :hint }
   end
 

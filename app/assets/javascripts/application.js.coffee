@@ -6,4 +6,8 @@
 #= require foundation/foundation.topbar
 #= require_tree .
 
-$ -> $(document).foundation()
+$ ->
+  $(document).foundation()
+
+  $('form.simple_form').on 'change', 'input, textarea, select', (e) ->
+    $(this).closest('.input').removeClass('error').find('span.error').remove()

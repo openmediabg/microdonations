@@ -1351,3 +1351,59 @@ $sub-nav-active-cursor: default;
 @import 'foundation/components/tables';
 @import 'foundation/components/thumbs';
 @import 'foundation/components/top-bar';
+
+// Abide and server-side validation error messages
+.abide-error span.abide-message,
+.error span.error,
+span.abide-message,
+span.error { @include form-error-message; line-height: 1em; }
+
+span.abide-message { display: none; }
+.error span.abide-message { display: none; }
+
+.error,
+.abide-error {
+  input,
+  textarea,
+  select {
+    margin-bottom: 0;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-bottom: $form-spacing
+  }
+
+  label,
+  label.abide-error {
+    @include form-label-error-color;
+  }
+
+  span.abide-error {
+    @include form-error-message;
+  }
+
+  > label {
+    > span {
+      color: scale-color($form-label-font-color, $lightness: 15%);
+      background: transparent;
+      padding: 0;
+      text-transform: $form-label-small-transform;
+      font-style: normal;
+      font-size: 60%;
+      margin: 0;
+      display: inline;
+    }
+  }
+
+  span.error-message {
+    display: block;
+  }
+}
+
+input.error,
+textarea.error,
+select.error {
+  margin-bottom: 0;
+}
+label.abide-error { @include form-label-error-color; }
